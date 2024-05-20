@@ -26,8 +26,7 @@ let on_play = (sid_)=>{
 <!--  <el-scrollbar max-height="500" scrollbar-always-on>-->
 <!--    -->
 <!--  </el-scrollbar>-->
-  
-  <el-table :data="res" scrollbar-always-on>
+  <el-table :data="res" height="500" scrollbar-always-on>
     <el-table-column label="歌曲">
       <template #default="{row: song}">
         <el-link :href="`https://music.163.com/#/song?id=${song.id}`" target="_blank">
