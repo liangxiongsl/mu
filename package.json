@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "nuxt dev"
+  },
+  "dependencies": {
+    "@element-plus/nuxt": "^1.0.9",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27"
+  }
+}
