@@ -26,7 +26,8 @@ let on_play = (sid_)=>{
 <!--  <el-scrollbar max-height="500" scrollbar-always-on>-->
 <!--    -->
 <!--  </el-scrollbar>-->
-  <el-table :data="res" height="500" scrollbar-always-on>
+  
+  <el-table :data="res" scrollbar-always-on>
     <el-table-column label="歌曲">
       <template #default="{row: song}">
         <el-link :href="`https://music.163.com/#/song?id=${song.id}`" target="_blank">
@@ -60,12 +61,14 @@ let on_play = (sid_)=>{
     <el-table-column label="">
       <template #default="{row: song}">
         <el-button @click="on_play(song.id)">播放</el-button>
-        <el-button @click="">复制</el-button>
+<!--        <el-button @click="">复制</el-button>-->
       </template>
     </el-table-column>
   </el-table>
 
-  <iframe class="w-full" :src="`//music.163.com/outchain/player?type=2&id=${sid}&auto=1&height=66`"></iframe>
+  <el-affix position="bottom">
+    <iframe class="w-full h-full" :src="`//music.163.com/outchain/player?type=2&id=${sid}`"></iframe>
+  </el-affix>
 
 </template>
 
